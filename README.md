@@ -4,6 +4,6 @@
 
  Instructions: 
  
- Type any username and login. You will be presented with the list of persons (one will be shown as an example). It's stored on a **session** level. You can add, remove or edit existing entries.
+ Type any username and login (username.length > 3 && password.length > 6). You will be presented with the list of persons (one will be shown as an example). It's stored on a **session** level. You can add, remove or edit existing entries of persons.
  
  
