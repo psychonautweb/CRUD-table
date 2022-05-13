@@ -1,10 +1,12 @@
 let persons = [
   {
-    firstName: 'Person',
-    lastName: 'Lastnameovic',
+    firstName: 'Marko',
+    lastName: 'Markovic',
     dateOfBirth: new Date(1990, 4, 12),
   },
 ];
+
+
 
 const containerDiv = document.getElementById('container');
 
@@ -70,6 +72,7 @@ const login = (event) => {
 
   if (username.length > 3 && password.length > 6) {
     sessionStorage.setItem('loggedIn', '1');
+    sessionStorage.setItem('persons', JSON.stringify(persons)); /// ****
     showPersons();
   } else {
     if (!document.getElementById('login-error-message')) {
@@ -195,6 +198,7 @@ const removePersons = (event) => {
     // let targetIdNumber = targetId.replace(/[^0-9]/g, ''); // regex kojim uklanjamo sve osim broja npr. id8 postaje 8
   }
 };
+
 
 if (sessionStorage.getItem('loggedIn')) {
   let personsStr = sessionStorage.getItem('persons');
