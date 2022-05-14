@@ -2,7 +2,7 @@ let persons = [
   {
     firstName: 'Marko',
     lastName: 'Markovic',
-    dateOfBirth: new Date(1990, 4, 12),
+    dateOfBirth: new Date(1990/04/12),
   },
 ];
 
