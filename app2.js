@@ -37,9 +37,9 @@ const showPersons = () => {
 
   containerDiv.innerHTML += `<table class="" width="100%" cellpadding=10 border=1 style="border-collapse: collapse; table-layout: fixed; border:2px solid black;"> 
       <tr>
-      <th>Ime</th>
-      <th>Prezime</th>
-      <th>Datum rodjenja</th>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Date of Birth</th>
       </tr>
       <tbody id="personData"></tbody>`;
 
@@ -54,8 +54,8 @@ const showPersons = () => {
       <td>${person.firstName}</td>
       <td>${person.lastName}</td>
       <td>${person.dateOfBirth}</td>
-      <td style="background-color: #e5f3de"><button onclick=editPersons(event) class="id${id}">Izmijeni</button></td>
-      <td style="background-color: pink"><button onclick=removePersons(event) class="id${id}">Ukloni</button></td>
+      <td style="background-color: #e5f3de"><button onclick=editPersons(event) class="id${id}">Edit</button></td>
+      <td style="background-color: pink"><button onclick=removePersons(event) class="id${id}">Remove</button></td>
       </tr>
       `;
   });
@@ -171,7 +171,7 @@ const removePersons = (event) => {
   event.preventDefault();
 
   let confirmation = confirm(
-    'Da li ste sigurni da želite izbrisati ovaj unos?'
+    'Are you sure that you want to delete this entry?'
   );
 
   if (confirmation) {
